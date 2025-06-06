@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset e fonte base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+   height: 100%;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+
+/* Cabeçalho */
+#cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  color: darkslategrey;
+  background-color: #ffffff;
+  
+}
+
+#cabecalho h1 {
+  cursor: pointer;
+}
+#cabecalho img {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+}
+
+#cabecalho button {
+  width: 120px;
+  height: 45px;
+  background-color: #19bb5a;
+  border-radius: 12px;
+  color: aliceblue;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Corpo com imagem de fundo */
+#body {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 150px);
+  overflow: hidden;
+}
+
+#body img {
+  border-radius: 4% 4% 0% 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+
+
+/* Texto sobre imagem */
+#texto {
+  font-weight: bold;
+  font-size: 3vw;
+  color: white;
+  margin-top: 10%;
+  margin-left: 8%;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+#texto p {
+  margin-top: 10px;
+  font-size: 2vw;
+  color: rgb(238, 236, 236);
+  font-weight: normal;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Botões */
+#buttons, #buttonss {
+  width: 200px;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#buttons {
+  background-color: darkslategrey;
+  border: none;
+}
+
+#buttonss {
+  background-color: #19bb5a;
+  border: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #cabecalho img {
+    width: 100px;
+  }
+
+  #cabecalho button {
+    width: 100%;
+  }
+
+  #texto {
+    font-size: 6vw;
+    margin-top: 20%;
+    margin-left: 5%;
+  }
+
+  #texto p {
+    font-size: 4vw;
+  }
+
+  #buttons, #buttonss {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #cabecalho img {
+    width: 80px;
+  }
+
+  #texto {
+    font-size: 7vw;
+    margin-top: 25%;
+  }
+
+  #texto p {
+    font-size: 5vw;
+  }
+}
